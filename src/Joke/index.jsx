@@ -4,6 +4,16 @@ import './style.css';
 let upLikes = 0;
 let downLikes = 0;
 
+//  const change = () => {
+//    if (like === true) {
+//      props.likes++
+//    } els
+//  }
+
+// const [click, setclick] = useState({props.likes});
+// const handleClick = () => setclick(e.target.valu
+// }
+
 const handleClickUp = () => {
   const likesUpElm = document.querySelector('#likes-up');
   upLikes++;

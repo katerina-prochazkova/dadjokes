@@ -6,8 +6,6 @@ import { Joke } from './Joke/index.jsx';
 import { jokes } from './jokes.js';
 // import images from './img';
 
-console.log(jokes[(2, 1)]);
-
 const App = () => {
   return (
     <>
