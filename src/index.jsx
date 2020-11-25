@@ -4,7 +4,6 @@ import './index.html';
 import './style.css';
 import { Joke } from './Joke/index.jsx';
 import { jokes } from './jokes.js';
-// import images from './img';
 
 const App = () => {
   return (

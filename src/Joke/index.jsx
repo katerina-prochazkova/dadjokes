@@ -1,32 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 
-let upLikes = 0;
-let downLikes = 0;
-
-//  const change = () => {
-//    if (like === true) {
-//      props.likes++
-//    } els
-//  }
-
-// const [click, setclick] = useState({props.likes});
-// const handleClick = () => setclick(e.target.valu
-// }
-
-const handleClickUp = () => {
-  const likesUpElm = document.querySelector('#likes-up');
-  upLikes++;
-  likesUpElm.textContent = upLikes;
-};
-
-const handleClickDown = () => {
-  const likesDownElm = document.querySelector('#likes-down');
-  downLikes++;
-  likesDownElm.textContent = downLikes;
-};
-
 export const Joke = (props) => {
+  const [likes, setLikes] = useState(props.likes);
+  const [dislikes, setDislikes] = useState(props.dislikes);
+
   return (
     <>
       <div class="container">
@@ -44,18 +22,18 @@ export const Joke = (props) => {
           <button
             id="btn-up"
             class="btn-like btn-like--up"
-            onClick={handleClickUp}
+            onClick={() => setLikes(likes + 1)}
           ></button>
           <span id="likes-up" class="likes-count likes-count--up">
-            {props.likes}
+            {likes}
           </span>
           <button
             id="btn-down"
             class="btn-like btn-like--down"
-            onClick={handleClickDown}
+            onClick={() => setDislikes(dislikes + 1)}
           ></button>
           <span id="likes-down" class="likes-count likes-count--down">
-            {props.dislikes}
+            {dislikes}
           </span>
         </div>
       </div>
